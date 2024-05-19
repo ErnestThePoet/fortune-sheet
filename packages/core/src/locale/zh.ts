@@ -11483,9 +11483,9 @@ export default {
     mergeError: "筛选选区有合并单元格，无法执行此操作！",
   },
   rightclick: {
-    copy: "复制",
+    copy: "复制请使用Ctrl+C",
     copyAs: "复制为",
-    paste: "粘贴",
+    paste: "粘贴请使用Ctrl+V",
     insert: "插入",
     image: "插入图片",
     link: "插入链接",

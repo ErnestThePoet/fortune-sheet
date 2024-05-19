@@ -42,36 +42,14 @@ const ContextMenu: React.FC = () => {
       }
       if (name === "copy") {
         return (
-          <Menu
-            key={name}
-            onClick={() => {
-              setContext((draftCtx) => {
-                if (draftCtx.luckysheet_select_save?.length! > 1) {
-                  showAlert(rightclick.noMulti, "ok");
-                  draftCtx.contextMenu = {};
-                  return;
-                }
-                handleCopy(draftCtx);
-                draftCtx.contextMenu = {};
-              });
-            }}
-          >
+          <Menu key={name} onClick={() => {}}>
             {rightclick.copy}
           </Menu>
         );
       }
       if (name === "paste") {
         return (
-          <Menu
-            key={name}
-            onClick={async () => {
-              const clipboardText = await navigator.clipboard.readText();
-              setContext((draftCtx) => {
-                handlePasteByClick(draftCtx, clipboardText);
-                draftCtx.contextMenu = {};
-              });
-            }}
-          >
+          <Menu key={name} onClick={() => {}}>
             {rightclick.paste}
           </Menu>
         );
